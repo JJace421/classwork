@@ -2,7 +2,7 @@
 total_minutes = int(input("Total minutes: "))
 hours = total_minutes // 60
 minutes = total_minutes % 60
-print(f"{%2df % total_minutes}mins is {hours}h and {minutes}mins.")
+print(f"{total_minutes}mins is {hours}h and {minutes}mins.")
 
 
 #3
