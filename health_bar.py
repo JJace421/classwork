@@ -31,13 +31,14 @@ def update(delta_time):
 
 def on_draw():
     arcade.start_render()
-    player_health = 74
+    
+    player_health = 87 #percentage
     max_health = 350
 
-    arcade.draw_xywh_rectangle_filled(75,200,500,50,arcade.color.AMBER)
+    arcade.draw_xywh_rectangle_filled(75,200,500,50,arcade.color.BLACK_BEAN)
     arcade.draw_xywh_rectangle_filled(90,210,475 * player_health / 100,30,arcade.color.RED)
     arcade.draw_rectangle_outline(327,225,475,30,arcade.color.DEEP_CHESTNUT,3,0)
-
+    arcade.draw_text(f'{player_health / 100 * max_health}/{max_health}',90,225,arcade.color.WHITE)
 
 
 def on_key_press(key, modifiers):
