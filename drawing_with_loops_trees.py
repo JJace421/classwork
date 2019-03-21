@@ -39,15 +39,20 @@ def update(delta_time):
 def on_draw():
     arcade.start_render()
 
-    tx1 = 25  #triangle x 1
-    tx2 = 75
-    tx3 = 125
-    arcade.draw_triangle_filled(tx1,125,tx2,300,tx3,125,arcade.color.DARK_PASTEL_GREEN)
-    arcade.draw_triangle_filled(tx1 + 150,125,tx2 + 150,300,tx3 + 150,125,arcade.color.DARK_PASTEL_GREEN)
+    tx1 = 0  # triangle x 1
+    tx2 = tx1 + 50
+    tx3 = tx1 + 100
+    ty1 = 87
+    ty2 = ty1 + 150
 
-    rx = 60
-    arcade.draw_xywh_rectangle_filled(rx,60,30,65,arcade.color.DARK_BROWN)
-    arcade.draw_xywh_rectangle_filled(rx + 150,60,30,65, arcade.color.DARK_BROWN)
+    rx = tx1 + 35
+    ry = ty1 - 65
+
+    for x in range(0,WIDTH,110):
+        arcade.draw_triangle_filled(tx1,ty1,tx2,ty2,tx3,ty1,arcade.color.DARK_PASTEL_GREEN)
+        arcade.draw_triangle_filled(tx1+x,ty1,tx2+x,ty2,tx3+x,ty1,arcade.color.DARK_PASTEL_GREEN)
+        arcade.draw_xywh_rectangle_filled(rx,ry,30,65,arcade.color.DARK_BROWN)
+        arcade.draw_xywh_rectangle_filled(rx+x,ry,30,65, arcade.color.DARK_BROWN)
 
 def on_key_press(key, modifiers):
     pass
