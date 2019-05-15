@@ -30,7 +30,8 @@ def on_draw():
     #     i += 1
 
     #zip
-    
+       # for x, y in zip(tree_x_location, tree_y_location):
+       # arcade.draw_circle_filled(x, y, 30, arcade.color.PINE_GREEN)
 
 def on_key_press(key, modifiers):
     pass
