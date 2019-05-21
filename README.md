@@ -1,5 +1,5 @@
 # Classwork
 
-Capital letter for coding excercises - exercises
+Capital letter for coding excercises 
 
-lower case letter for arcade exercises - exercises
+lower case letter for arcade exercises
